@@ -15,10 +15,13 @@
 
 body, html {
     font-family: 'Roboto', sans-serif;
-    background-color: var(--rosol-black);
     color: var(--rosol-white);
     min-height: 100vh;
     line-height: 1.6;
+    background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot_20241212-013556-QU7FZIw7kgHivn77k6qevNSPCqkvhw.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 body::before {
@@ -28,10 +31,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot_20241212-013556-QU7FZIw7kgHivn77k6qevNSPCqkvhw.png');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.9;
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: -1;
 }
 
@@ -40,6 +40,9 @@ body::before {
     margin: 0 auto;
     padding: 20px;
     position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
 }
 
 .header {
@@ -58,7 +61,7 @@ body::before {
     margin-bottom: 40px;
     border: 1px solid var(--rosol-accent);
     padding: 30px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
     border-radius: 15px;
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
