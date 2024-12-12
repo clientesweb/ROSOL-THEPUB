@@ -1,4 +1,4 @@
-const whatsappNumber = '1234567890'; // Replace with your actual number
+const whatsappNumber = '3546458987'; // Replace with your actual number
 let cart = [];
 
 const menuCategories = [
