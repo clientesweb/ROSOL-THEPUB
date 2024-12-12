@@ -24,10 +24,10 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot_20241212-013556-C0GT65dBgySp8UyAoxLBX7G79cju4N.png');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.9;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIj48ZmlsdGVyIGlkPSJub2lzZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNjUiIG51bU9jdGF2ZXM9IjMiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgZmlsdGVyPSJ1cmwoI25vaXNlKSIgb3BhY2l0eT0iMC4wNSIvPjwvc3ZnPg==');
+            background-repeat: repeat;
+            background-size: 500px 500px;
+            opacity: 0.1;
             z-index: -1;
         }
 
@@ -35,7 +35,6 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            position: relative;
         }
 
         .header {
@@ -49,13 +48,29 @@
             margin-bottom: 20px;
         }
 
+        h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            letter-spacing: 0.1em;
+            margin: 0;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 0.2em;
+            margin-top: 10px;
+            color: #ccc;
+        }
+
         .menu-section {
             margin-bottom: 40px;
             border: 1px solid rgba(255, 255, 255, 0.2);
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.5);
             border-radius: 8px;
-            backdrop-filter: blur(5px);
         }
 
         .menu-section h2 {
@@ -65,6 +80,7 @@
             margin-top: 0;
             margin-bottom: 20px;
             color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
         .menu-item {
@@ -77,10 +93,6 @@
 
         .menu-item:last-child {
             border-bottom: none;
-        }
-
-        .item-info {
-            flex-grow: 1;
         }
 
         .item-name {
@@ -98,28 +110,69 @@
             font-size: 1.2rem;
             font-weight: 900;
             color: #fff;
-            margin: 0 20px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
 
-        .add-to-cart {
-            background-color: #ffffff20;
-            border: 1px solid #fff;
-            color: #fff;
-            padding: 5px 10px;
+        .special-category {
+            background: linear-gradient(45deg, #ff4444, #ff9966);
+            color: white;
+            padding: 2px 8px;
             border-radius: 4px;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            font-size: 0.8rem;
+            margin-left: 10px;
+            text-transform: uppercase;
         }
 
-        .add-to-cart:hover {
-            background-color: #ffffff40;
+        .happy-hour {
+            background: linear-gradient(45deg, #44b0ff, #9966ff);
         }
 
-        .cart-button {
+        .item-notes {
+            width: 100%;
+            background-color: #333;
+            border: 1px solid #555;
+            color: white;
+            padding: 5px;
+            margin-top: 5px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .social-links {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: 40px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ff9966;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .powered-by {
+            font-size: 0.7rem;
+            margin-top: 5px;
+        }
+
+        .reservation-button {
             position: fixed;
             bottom: 20px;
-            right: 20px;
-            background-color: #25d366;
+            left: 20px;
+            background-color: #ff9966;
             color: white;
             border: none;
             border-radius: 50%;
@@ -133,108 +186,26 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.3);
         }
 
-        .cart-count {
-            position: absolute;
-            top: -5px;
-            right: -5px;
-            background-color: #ff4444;
-            color: white;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            font-size: 12px;
+        .menu-tabs {
             display: flex;
-            align-items: center;
             justify-content: center;
-        }
-
-        #cart-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.8);
-            z-index: 1000;
-        }
-
-        .cart-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #1a1a1a;
-            padding: 20px;
-            border-radius: 8px;
-            max-width: 500px;
-            width: 90%;
-            max-height: 80vh;
-            overflow-y: auto;
-        }
-
-        .table-selection {
-            margin-bottom: 20px;
-        }
-
-        .delivery-option {
-            margin-bottom: 20px;
-        }
-
-        select, input {
-            background-color: #333;
-            color: white;
-            border: 1px solid #555;
-            padding: 8px;
-            border-radius: 4px;
-            width: 100%;
-            margin-top: 5px;
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-        .send-order {
-            background-color: #25d366;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-            margin-top: 20px;
-        }
-
-        .cart-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-            border-bottom: 1px solid #333;
-        }
-
-        .cart-item-quantity {
-            display: flex;
-            align-items: center;
             gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
         }
 
-        .quantity-btn {
-            background-color: #333;
-            color: white;
+        .menu-tab {
+            background-color: rgba(255, 255, 255, 0.1);
             border: none;
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
             cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .menu-tab.active {
+            background-color: #ff9966;
         }
     </style>
 </head>
@@ -242,9 +213,33 @@
     <div class="content-wrapper">
         <header class="header">
             <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot_20241212-013537-enASZqFVN5oDy8K8Hjd6TboEhzwy18.png" alt="ROSOL Logo" class="logo">
+            <h1>ROSOL</h1>
+            <p class="subtitle">The pub</p>
         </header>
 
-        <section class="menu-section">
+        <div class="menu-tabs">
+            <button class="menu-tab active" onclick="filterMenu('all')">Todo</button>
+            <button class="menu-tab" onclick="filterMenu('drinks')">Bebidas</button>
+            <button class="menu-tab" onclick="filterMenu('food')">Comidas</button>
+            <button class="menu-tab" onclick="filterMenu('special')">Especiales</button>
+        </div>
+
+        <section class="menu-section" data-category="special">
+            <h2>Happy Hour <span class="special-category happy-hour">2x1</span></h2>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Mojito</div>
+                    <div class="item-description">Ron blanco, menta fresca, lima, azúcar, soda</div>
+                </div>
+                <div class="item-price">$8.00</div>
+                <button class="add-to-cart" onclick="addToCart('Mojito (Happy Hour)', 8.00)">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+            <!-- Más items happy hour -->
+        </section>
+
+        <section class="menu-section" data-category="drinks">
             <h2>Cócteles</h2>
             <div class="menu-item">
                 <div class="item-info">
@@ -256,150 +251,201 @@
                     <i class="fas fa-plus"></i>
                 </button>
             </div>
-            <!-- Más cócteles aquí -->
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Mojito</div>
+                    <div class="item-description">Ron blanco, menta fresca, lima, azúcar, soda</div>
+                </div>
+                <div class="item-price">$10.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Margarita</div>
+                    <div class="item-description">Tequila, triple sec, jugo de limón</div>
+                </div>
+                <div class="item-price">$11.00</div>
+            </div>
         </section>
 
-        <!-- Más secciones del menú aquí -->
+        <section class="menu-section" data-category="drinks">
+            <h2>Cervezas Artesanales <span class="special-category">Nuevo</span></h2>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">IPA Local</div>
+                    <div class="item-description">Cerveza artesanal con notas cítricas y tropicales</div>
+                </div>
+                <div class="item-price">$8.00</div>
+                <button class="add-to-cart" onclick="addToCart('IPA Local', 8.00)">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+            <div class="menu-item">
+                <div class="item-name">Cerveza Nacional</div>
+                <div class="item-price">$5.00</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-name">Cerveza Importada</div>
+                <div class="item-price">$7.00</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-name">Cerveza Artesanal</div>
+                <div class="item-price">$8.00</div>
+            </div>
+        </section>
+
+        <section class="menu-section" data-category="food">
+            <h2>Tapas</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Patatas Bravas</div>
+                    <div class="item-description">Patatas fritas con salsa picante</div>
+                </div>
+                <div class="item-price">$8.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Tabla de Quesos</div>
+                    <div class="item-description">Selección de quesos con pan y mermelada</div>
+                </div>
+                <div class="item-price">$15.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Calamares Fritos</div>
+                    <div class="item-description">Con salsa alioli</div>
+                </div>
+                <div class="item-price">$12.00</div>
+            </div>
+        </section>
+
+        <section class="menu-section" data-category="food">
+            <h2>Platos Principales <span class="special-category">Chef</span></h2>
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">Risotto de Setas</div>
+                    <div class="item-description">Arroz arborio, variedad de setas, parmesano</div>
+                </div>
+                <div class="item-price">$18.00</div>
+                <button class="add-to-cart" onclick="addToCart('Risotto de Setas', 18.00)">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+            <!-- Más platos principales -->
+        </section>
+
+        <section class="menu-section" data-category="drinks">
+            <h2>Vinos</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Vino Tinto</div>
+                    <div class="item-description">Copa de casa</div>
+                </div>
+                <div class="item-price">$8.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="item-name">Vino Blanco</div>
+                    <div class="item-description">Copa de casa</div>
+                </div>
+                <div class="item-price">$8.00</div>
+            </div>
+        </section>
+
+
+        <div class="social-links">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+
+        <footer class="footer">
+            <div>© 2024 ROSOL - The pub. Todos los derechos reservados.</div>
+            <div class="powered-by">Powered by Duality Domain</div>
+        </footer>
     </div>
+
+    <button class="reservation-button" onclick="makeReservation()">
+        <i class="fas fa-calendar-alt"></i>
+    </button>
 
     <button class="cart-button" onclick="openCart()">
         <i class="fas fa-shopping-cart"></i>
         <span class="cart-count">0</span>
     </button>
 
+    <!-- Modal del carrito (previo) -->
     <div id="cart-modal">
+        <!-- Contenido previo del modal -->
         <div class="cart-content">
-            <button class="close-modal" onclick="closeCart()">&times;</button>
-            <h2>Tu Pedido</h2>
-            <div class="table-selection">
-                <label for="table-number">Número de Mesa:</label>
-                <select id="table-number">
-                    <option value="">Selecciona una mesa</option>
-                    <option value="1">Mesa 1</option>
-                    <option value="2">Mesa 2</option>
-                    <!-- Más mesas aquí -->
-                </select>
+            <!-- ... contenido previo ... -->
+            <div class="notes-section">
+                <label for="order-notes">Notas especiales:</label>
+                <textarea id="order-notes" placeholder="Ej: Sin hielo, extra picante, etc." class="item-notes"></textarea>
             </div>
-            <div class="delivery-option">
-                <label>
-                    <input type="radio" name="delivery-type" value="mesa" checked> Para la mesa
-                </label>
-                <label>
-                    <input type="radio" name="delivery-type" value="delivery"> Delivery
-                </label>
-                <div id="delivery-address" style="display: none; margin-top: 10px;">
-                    <input type="text" placeholder="Dirección de entrega">
-                </div>
-            </div>
-            <div id="cart-items"></div>
-            <div id="cart-total">Total: $0.00</div>
-            <button class="send-order" onclick="sendWhatsAppOrder()">Enviar Pedido por WhatsApp</button>
         </div>
     </div>
 
     <script>
+        // JavaScript puro para cualquier funcionalidad adicional
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('El menú de ROSOL ha sido cargado correctamente.');
+        });
+
         let cart = [];
-        const whatsappNumber = '1234567890'; // Reemplazar con tu número de WhatsApp
 
-        function addToCart(name, price) {
-            const existingItem = cart.find(item => item.name === name);
-            if (existingItem) {
-                existingItem.quantity += 1;
-            } else {
-                cart.push({ name, price, quantity: 1 });
-            }
-            updateCartDisplay();
+        function addToCart(itemName, price) {
+            cart.push({ itemName, price });
+            updateCartCount();
         }
 
-        function updateCartDisplay() {
-            const cartCount = document.querySelector('.cart-count');
-            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-            cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
-            
-            const cartItems = document.getElementById('cart-items');
-            cartItems.innerHTML = cart.map(item => `
-                <div class="cart-item">
-                    <span>${item.name}</span>
-                    <div class="cart-item-quantity">
-                        <button class="quantity-btn" onclick="updateQuantity('${item.name}', ${item.quantity - 1})">-</button>
-                        <span>${item.quantity}</span>
-                        <button class="quantity-btn" onclick="updateQuantity('${item.name}', ${item.quantity + 1})">+</button>
-                    </div>
-                    <span>$${(item.price * item.quantity).toFixed(2)}</span>
-                </div>
-            `).join('');
-
-            document.getElementById('cart-total').textContent = `Total: $${total.toFixed(2)}`;
-        }
-
-        function updateQuantity(name, newQuantity) {
-            if (newQuantity <= 0) {
-                cart = cart.filter(item => item.name !== name);
-            } else {
-                const item = cart.find(item => item.name === name);
-                if (item) item.quantity = newQuantity;
-            }
-            updateCartDisplay();
+        function updateCartCount() {
+            const cartCountElement = document.querySelector('.cart-count');
+            cartCountElement.textContent = cart.length;
         }
 
         function openCart() {
+            // Aquí abrirías el modal del carrito
             document.getElementById('cart-modal').style.display = 'block';
         }
 
-        function closeCart() {
-            document.getElementById('cart-modal').style.display = 'none';
+        function makeReservation() {
+            const message = encodeURIComponent(
+                "🍸 *SOLICITUD DE RESERVA ROSOL*\n\n" +
+                "Me gustaría hacer una reserva en ROSOL."
+            );
+            window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
         }
 
-        function sendWhatsAppOrder() {
-            const tableNumber = document.getElementById('table-number').value;
-            const deliveryType = document.querySelector('input[name="delivery-type"]:checked').value;
-            const deliveryAddress = deliveryType === 'delivery' ? 
-                document.querySelector('#delivery-address input').value : '';
+        function filterMenu(category) {
+            const sections = document.querySelectorAll('.menu-section');
+            const tabs = document.querySelectorAll('.menu-tab');
+            
+            tabs.forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
 
-            if (!tableNumber && deliveryType !== 'delivery') {
-                alert('Por favor selecciona un número de mesa');
+            if (category === 'all') {
+                sections.forEach(section => section.style.display = 'block');
                 return;
             }
 
-            if (deliveryType === 'delivery' && !deliveryAddress) {
-                alert('Por favor ingresa la dirección de entrega');
-                return;
-            }
-
-            if (cart.length === 0) {
-                alert('Tu carrito está vacío');
-                return;
-            }
-
-            const orderDetails = cart.map(item => 
-                `${item.name} x${item.quantity} - $${(item.price * item.quantity).toFixed(2)}`
-            ).join('\n');
-
-            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-
-            let message = '🍸 *NUEVO PEDIDO ROSOL*\n\n';
-            message += deliveryType === 'delivery' ? 
-                `📍 Delivery a: ${deliveryAddress}\n\n` : 
-                `🪑 Mesa: ${tableNumber}\n\n`;
-            message += `*PEDIDO:*\n${orderDetails}\n\n`;
-            message += `*TOTAL: $${total.toFixed(2)}*`;
-
-            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-            window.open(whatsappUrl, '_blank');
-
-            // Limpiar carrito después de enviar
-            cart = [];
-            updateCartDisplay();
-            closeCart();
-        }
-
-        // Mostrar/ocultar campo de dirección según tipo de entrega
-        document.querySelectorAll('input[name="delivery-type"]').forEach(radio => {
-            radio.addEventListener('change', function() {
-                document.getElementById('delivery-address').style.display = 
-                    this.value === 'delivery' ? 'block' : 'none';
+            sections.forEach(section => {
+                if (section.dataset.category === category) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
             });
-        });
+        }
+
+        // Modificar la función sendWhatsAppOrder para incluir las notas
+        function sendWhatsAppOrder() {
+            // ... código previo ...
+            const notes = document.getElementById('order-notes').value;
+            if (notes) {
+                message += `\n\n*NOTAS:*\n${notes}`;
+            }
+            // ... resto del código ...
+        }
     </script>
 </body>
 </html>
