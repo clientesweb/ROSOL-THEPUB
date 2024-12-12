@@ -8,12 +8,18 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
 
+        :root {
+            --rosol-white: #FFFFFF;
+            --rosol-black: #000000;
+            --rosol-accent: rgba(255, 255, 255, 0.8);
+        }
+
         body, html {
             margin: 0;
             padding: 0;
             font-family: 'Roboto', sans-serif;
-            background-color: #000;
-            color: #fff;
+            background-color: var(--rosol-black);
+            color: var(--rosol-white);
             min-height: 100vh;
         }
 
@@ -24,10 +30,10 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIj48ZmlsdGVyIGlkPSJub2lzZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNjUiIG51bU9jdGF2ZXM9IjMiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgZmlsdGVyPSJ1cmwoI25vaXNlKSIgb3BhY2l0eT0iMC4wNSIvPjwvc3ZnPg==');
-            background-repeat: repeat;
-            background-size: 500px 500px;
-            opacity: 0.1;
+            background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot_20241212-013556-mZSOw2xZzcf1jlXAFSBAqk04S3xou2.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.9;
             z-index: -1;
         }
 
@@ -35,6 +41,7 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+            position: relative;
         }
 
         .header {
@@ -43,147 +50,131 @@
         }
 
         .logo {
-            width: 200px;
+            width: 300px;
             height: auto;
             margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: 4rem;
-            font-weight: 900;
-            letter-spacing: 0.1em;
-            margin: 0;
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .subtitle {
-            font-size: 1.5rem;
-            font-weight: 300;
-            letter-spacing: 0.2em;
-            margin-top: 10px;
-            color: #ccc;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
         }
 
         .menu-section {
             margin-bottom: 40px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid var(--rosol-accent);
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.7);
             border-radius: 8px;
+            backdrop-filter: blur(5px);
         }
 
         .menu-section h2 {
             font-size: 2rem;
-            font-weight: 900;
+            font-weight: 300;
             letter-spacing: 0.1em;
             margin-top: 0;
             margin-bottom: 20px;
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            color: var(--rosol-white);
+            border-bottom: 1px solid var(--rosol-accent);
+            padding-bottom: 10px;
         }
 
         .menu-item {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             margin-bottom: 15px;
             padding-bottom: 15px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .menu-item:last-child {
             border-bottom: none;
         }
 
+        .item-info {
+            flex-grow: 1;
+        }
+
         .item-name {
             font-size: 1.2rem;
             font-weight: 400;
+            color: var(--rosol-white);
         }
 
         .item-description {
             font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.8);
+            color: var(--rosol-accent);
             margin-top: 5px;
         }
 
         .item-price {
             font-size: 1.2rem;
-            font-weight: 900;
-            color: #fff;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            font-weight: 300;
+            color: var(--rosol-white);
+            margin: 0 20px;
         }
 
-        .special-category {
-            background: linear-gradient(45deg, #ff4444, #ff9966);
-            color: white;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            margin-left: 10px;
-            text-transform: uppercase;
-        }
-
-        .happy-hour {
-            background: linear-gradient(45deg, #44b0ff, #9966ff);
-        }
-
-        .item-notes {
-            width: 100%;
-            background-color: #333;
-            border: 1px solid #555;
-            color: white;
-            padding: 5px;
-            margin-top: 5px;
-            border-radius: 4px;
-            font-size: 0.9rem;
-        }
-
-        .social-links {
-            text-align: center;
-            padding: 20px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            margin-top: 40px;
-        }
-
-        .social-links a {
-            color: white;
-            font-size: 24px;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: #ff9966;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 0.8rem;
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        .powered-by {
-            font-size: 0.7rem;
-            margin-top: 5px;
-        }
-
-        .reservation-button {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background-color: #ff9966;
-            color: white;
-            border: none;
+        .add-to-cart {
+            background: none;
+            border: 1px solid var(--rosol-white);
+            color: var(--rosol-white);
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .add-to-cart:hover {
+            background-color: var(--rosol-white);
+            color: var(--rosol-black);
+        }
+
+        .floating-buttons {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .cart-button, .reservation-button {
+            background: none;
+            border: 1px solid var(--rosol-white);
+            color: var(--rosol-white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            font-size: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .cart-button:hover, .reservation-button:hover {
+            background-color: var(--rosol-white);
+            color: var(--rosol-black);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: var(--rosol-white);
+            color: var(--rosol-black);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .menu-tabs {
@@ -195,217 +186,366 @@
         }
 
         .menu-tab {
-            background-color: rgba(255, 255, 255, 0.1);
-            border: none;
-            color: white;
-            padding: 10px 20px;
+            background: none;
+            border: 1px solid var(--rosol-white);
+            color: var(--rosol-white);
+            padding: 8px 16px;
             border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .menu-tab.active, .menu-tab:hover {
+            background-color: var(--rosol-white);
+            color: var(--rosol-black);
+        }
+
+        .special-category {
+            border: 1px solid var(--rosol-white);
+            color: var(--rosol-white);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-left: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .social-links {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid var(--rosol-accent);
+            margin-top: 40px;
+        }
+
+        .social-links a {
+            color: var(--rosol-white);
+            font-size: 24px;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--rosol-accent);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8rem;
+            color: var(--rosol-accent);
+            letter-spacing: 1px;
+        }
+
+        .powered-by {
+            font-size: 0.7rem;
+            margin-top: 5px;
+            letter-spacing: 2px;
+        }
+
+        #cart-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+        }
+
+        .cart-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: var(--rosol-black);
+            border: 1px solid var(--rosol-accent);
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            color: var(--rosol-white);
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--rosol-accent);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: var(--rosol-white);
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .send-order {
+            background: none;
+            border: 1px solid var(--rosol-white);
+            color: var(--rosol-white);
+            padding: 10px 20px;
+            width: 100%;
+            margin-top: 20px;
             cursor: pointer;
             transition: all 0.3s ease;
         }
 
-        .menu-tab.active {
-            background-color: #ff9966;
+        .send-order:hover {
+            background-color: var(--rosol-white);
+            color: var(--rosol-black);
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                width: 200px;
+            }
+            
+            .menu-tab {
+                font-size: 0.8rem;
+                padding: 6px 12px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="content-wrapper">
         <header class="header">
-            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot_20241212-013537-enASZqFVN5oDy8K8Hjd6TboEhzwy18.png" alt="ROSOL Logo" class="logo">
-            <h1>ROSOL</h1>
-            <p class="subtitle">The pub</p>
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot_20241212-013537-r2hS7jD2cxFUDIhgbbkmCmyRFdWRYQ.png" alt="ROSOL Logo" class="logo">
         </header>
 
         <div class="menu-tabs">
             <button class="menu-tab active" onclick="filterMenu('all')">Todo</button>
-            <button class="menu-tab" onclick="filterMenu('drinks')">Bebidas</button>
-            <button class="menu-tab" onclick="filterMenu('food')">Comidas</button>
-            <button class="menu-tab" onclick="filterMenu('special')">Especiales</button>
+            <button class="menu-tab" onclick="filterMenu('cocktails')">Cócteles</button>
+            <button class="menu-tab" onclick="filterMenu('beers')">Cervezas</button>
+            <button class="menu-tab" onclick="filterMenu('wines')">Vinos</button>
+            <button class="menu-tab" onclick="filterMenu('tapas')">Tapas</button>
+            <button class="menu-tab" onclick="filterMenu('main')">Platos Principales</button>
         </div>
 
-        <section class="menu-section" data-category="special">
-            <h2>Happy Hour <span class="special-category happy-hour">2x1</span></h2>
-            <div class="menu-item">
-                <div class="item-info">
-                    <div class="item-name">Mojito</div>
-                    <div class="item-description">Ron blanco, menta fresca, lima, azúcar, soda</div>
-                </div>
-                <div class="item-price">$8.00</div>
-                <button class="add-to-cart" onclick="addToCart('Mojito (Happy Hour)', 8.00)">
-                    <i class="fas fa-plus"></i>
-                </button>
-            </div>
-            <!-- Más items happy hour -->
-        </section>
-
-        <section class="menu-section" data-category="drinks">
+        <section class="menu-section" data-category="cocktails">
             <h2>Cócteles</h2>
             <div class="menu-item">
                 <div class="item-info">
-                    <div class="item-name">Martini Clásico</div>
-                    <div class="item-description">Gin o vodka, vermut seco, aceituna o twist de limón</div>
+                    <span class="item-name">Martini Clásico</span>
+                    <p class="item-description">Gin o vodka, vermut seco, aceituna o twist de limón</p>
                 </div>
-                <div class="item-price">$12.00</div>
-                <button class="add-to-cart" onclick="addToCart('Martini Clásico', 12.00)">
-                    <i class="fas fa-plus"></i>
-                </button>
+                <span class="item-price">$12.00</span>
+                <button class="add-to-cart" onclick="addToCart('Martini Clásico', 12.00)">+</button>
             </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Mojito</div>
-                    <div class="item-description">Ron blanco, menta fresca, lima, azúcar, soda</div>
-                </div>
-                <div class="item-price">$10.00</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Margarita</div>
-                    <div class="item-description">Tequila, triple sec, jugo de limón</div>
-                </div>
-                <div class="item-price">$11.00</div>
-            </div>
-        </section>
-
-        <section class="menu-section" data-category="drinks">
-            <h2>Cervezas Artesanales <span class="special-category">Nuevo</span></h2>
             <div class="menu-item">
                 <div class="item-info">
-                    <div class="item-name">IPA Local</div>
-                    <div class="item-description">Cerveza artesanal con notas cítricas y tropicales</div>
+                    <span class="item-name">Mojito</span>
+                    <p class="item-description">Ron blanco, menta fresca, lima, azúcar, soda</p>
                 </div>
-                <div class="item-price">$8.00</div>
-                <button class="add-to-cart" onclick="addToCart('IPA Local', 8.00)">
-                    <i class="fas fa-plus"></i>
-                </button>
+                <span class="item-price">$10.00</span>
+                <button class="add-to-cart" onclick="addToCart('Mojito', 10.00)">+</button>
             </div>
-            <div class="menu-item">
-                <div class="item-name">Cerveza Nacional</div>
-                <div class="item-price">$5.00</div>
-            </div>
-            <div class="menu-item">
-                <div class="item-name">Cerveza Importada</div>
-                <div class="item-price">$7.00</div>
-            </div>
-            <div class="menu-item">
-                <div class="item-name">Cerveza Artesanal</div>
-                <div class="item-price">$8.00</div>
-            </div>
-        </section>
-
-        <section class="menu-section" data-category="food">
-            <h2>Tapas</h2>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Patatas Bravas</div>
-                    <div class="item-description">Patatas fritas con salsa picante</div>
-                </div>
-                <div class="item-price">$8.00</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Tabla de Quesos</div>
-                    <div class="item-description">Selección de quesos con pan y mermelada</div>
-                </div>
-                <div class="item-price">$15.00</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="item-name">Calamares Fritos</div>
-                    <div class="item-description">Con salsa alioli</div>
-                </div>
-                <div class="item-price">$12.00</div>
-            </div>
-        </section>
-
-        <section class="menu-section" data-category="food">
-            <h2>Platos Principales <span class="special-category">Chef</span></h2>
             <div class="menu-item">
                 <div class="item-info">
-                    <div class="item-name">Risotto de Setas</div>
-                    <div class="item-description">Arroz arborio, variedad de setas, parmesano</div>
+                    <span class="item-name">Margarita</span>
+                    <p class="item-description">Tequila, triple sec, jugo de limón</p>
                 </div>
-                <div class="item-price">$18.00</div>
-                <button class="add-to-cart" onclick="addToCart('Risotto de Setas', 18.00)">
-                    <i class="fas fa-plus"></i>
-                </button>
+                <span class="item-price">$11.00</span>
+                <button class="add-to-cart" onclick="addToCart('Margarita', 11.00)">+</button>
             </div>
-            <!-- Más platos principales -->
         </section>
 
-        <section class="menu-section" data-category="drinks">
+        <section class="menu-section" data-category="beers">
+            <h2>Cervezas</h2>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Cerveza Nacional</span>
+                </div>
+                <span class="item-price">$5.00</span>
+                <button class="add-to-cart" onclick="addToCart('Cerveza Nacional', 5.00)">+</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Cerveza Importada</span>
+                </div>
+                <span class="item-price">$7.00</span>
+                <button class="add-to-cart" onclick="addToCart('Cerveza Importada', 7.00)">+</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Cerveza Artesanal</span>
+                </div>
+                <span class="item-price">$8.00</span>
+                <button class="add-to-cart" onclick="addToCart('Cerveza Artesanal', 8.00)">+</button>
+            </div>
+        </section>
+
+        <section class="menu-section" data-category="wines">
             <h2>Vinos</h2>
             <div class="menu-item">
-                <div>
-                    <div class="item-name">Vino Tinto</div>
-                    <div class="item-description">Copa de casa</div>
+                <div class="item-info">
+                    <span class="item-name">Vino Tinto</span>
+                    <p class="item-description">Copa de casa</p>
                 </div>
-                <div class="item-price">$8.00</div>
+                <span class="item-price">$8.00</span>
+                <button class="add-to-cart" onclick="addToCart('Vino Tinto', 8.00)">+</button>
             </div>
             <div class="menu-item">
-                <div>
-                    <div class="item-name">Vino Blanco</div>
-                    <div class="item-description">Copa de casa</div>
+                <div class="item-info">
+                    <span class="item-name">Vino Blanco</span>
+                    <p class="item-description">Copa de casa</p>
                 </div>
-                <div class="item-price">$8.00</div>
+                <span class="item-price">$8.00</span>
+                <button class="add-to-cart" onclick="addToCart('Vino Blanco', 8.00)">+</button>
             </div>
         </section>
 
+        <section class="menu-section" data-category="tapas">
+            <h2>Tapas</h2>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Patatas Bravas</span>
+                    <p class="item-description">Patatas fritas con salsa picante</p>
+                </div>
+                <span class="item-price">$8.00</span>
+                <button class="add-to-cart" onclick="addToCart('Patatas Bravas', 8.00)">+</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Tabla de Quesos</span>
+                    <p class="item-description">Selección de quesos con pan y mermelada</p>
+                </div>
+                <span class="item-price">$15.00</span>
+                <button class="add-to-cart" onclick="addToCart('Tabla de Quesos', 15.00)">+</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Calamares Fritos</span>
+                    <p class="item-description">Con salsa alioli</p>
+                </div>
+                <span class="item-price">$12.00</span>
+                <button class="add-to-cart" onclick="addToCart('Calamares Fritos', 12.00)">+</button>
+            </div>
+        </section>
+
+        <section class="menu-section" data-category="main">
+            <h2>Platos Principales</h2>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Paella de Mariscos</span>
+                    <p class="item-description">Arroz con variedad de mariscos y azafrán</p>
+                </div>
+                <span class="item-price">$22.00</span>
+                <button class="add-to-cart" onclick="addToCart('Paella de Mariscos', 22.00)">+</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Filete de Ternera</span>
+                    <p class="item-description">Con salsa de vino tinto y patatas</p>
+                </div>
+                <span class="item-price">$25.00</span>
+                <button class="add-to-cart" onclick="addToCart('Filete de Ternera', 25.00)">+</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Pasta Mediterránea</span>
+                    <p class="item-description">Pasta con tomates cherry, aceitunas y queso feta</p>
+                </div>
+                <span class="item-price">$18.00</span>
+                <button class="add-to-cart" onclick="addToCart('Pasta Mediterránea', 18.00)">+</button>
+            </div>
+        </section>
+
+        <div class="floating-buttons">
+            <button class="reservation-button" onclick="makeReservation()">
+                <i class="fas fa-calendar-alt"></i>
+            </button>
+            <button class="cart-button" onclick="openCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </button>
+        </div>
 
         <div class="social-links">
             <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
 
         <footer class="footer">
-            <div>© 2024 ROSOL - The pub. Todos los derechos reservados.</div>
-            <div class="powered-by">Powered by Duality Domain</div>
+            <p>&copy; 2023 ROSOL - The pub. Todos los derechos reservados.</p>
+            <p class="powered-by">Powered by v0</p>
         </footer>
     </div>
 
-    <button class="reservation-button" onclick="makeReservation()">
-        <i class="fas fa-calendar-alt"></i>
-    </button>
-
-    <button class="cart-button" onclick="openCart()">
-        <i class="fas fa-shopping-cart"></i>
-        <span class="cart-count">0</span>
-    </button>
-
-    <!-- Modal del carrito (previo) -->
     <div id="cart-modal">
-        <!-- Contenido previo del modal -->
         <div class="cart-content">
-            <!-- ... contenido previo ... -->
-            <div class="notes-section">
-                <label for="order-notes">Notas especiales:</label>
-                <textarea id="order-notes" placeholder="Ej: Sin hielo, extra picante, etc." class="item-notes"></textarea>
-            </div>
+            <button class="close-modal" onclick="closeCart()">&times;</button>
+            <h2>Tu Pedido</h2>
+            <div id="cart-items"></div>
+            <div id="cart-total"></div>
+            <select id="table-number">
+                <option value="">Selecciona tu mesa</option>
+                <option value="1">Mesa 1</option>
+                <option value="2">Mesa 2</option>
+                <option value="3">Mesa 3</option>
+                <option value="4">Mesa 4</option>
+                <option value="5">Mesa 5</option>
+            </select>
+            <textarea id="order-notes" placeholder="Notas adicionales para tu pedido"></textarea>
+            <button class="send-order" onclick="sendWhatsAppOrder()">Enviar Pedido por WhatsApp</button>
         </div>
     </div>
 
     <script>
-        // JavaScript puro para cualquier funcionalidad adicional
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('El menú de ROSOL ha sido cargado correctamente.');
-        });
-
+        const whatsappNumber = '1234567890'; // Reemplazar con tu número real
         let cart = [];
 
-        function addToCart(itemName, price) {
-            cart.push({ itemName, price });
-            updateCartCount();
+        function addToCart(name, price) {
+            const existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ name, price, quantity: 1 });
+            }
+            updateCartDisplay();
         }
 
-        function updateCartCount() {
-            const cartCountElement = document.querySelector('.cart-count');
-            cartCountElement.textContent = cart.length;
+        function updateCartDisplay() {
+            const cartCount = document.querySelector('.cart-count');
+            cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
         }
 
         function openCart() {
-            // Aquí abrirías el modal del carrito
+            const cartItemsDiv = document.getElementById('cart-items');
+            const cartTotalDiv = document.getElementById('cart-total');
+            cartItemsDiv.innerHTML = '';
+            let total = 0;
+
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                cartItemsDiv.innerHTML += `
+                    <div class="cart-item">
+                        <span>${item.name} x${item.quantity}</span>
+                        <span>$${itemTotal.toFixed(2)}</span>
+                    </div>
+                `;
+            });
+
+            cartTotalDiv.innerHTML = `<strong>Total: $${total.toFixed(2)}</strong>`;
             document.getElementById('cart-modal').style.display = 'block';
+        }
+
+        function closeCart() {
+            document.getElementById('cart-modal').style.display = 'none';
         }
 
         function makeReservation() {
@@ -437,14 +577,38 @@
             });
         }
 
-        // Modificar la función sendWhatsAppOrder para incluir las notas
         function sendWhatsAppOrder() {
-            // ... código previo ...
+            if (cart.length === 0) {
+                alert('Tu carrito está vacío');
+                return;
+            }
+
+            const tableNumber = document.getElementById('table-number').value;
+            if (!tableNumber) {
+                alert('Por favor selecciona un número de mesa');
+                return;
+            }
+
+            const orderDetails = cart.map(item => 
+                `${item.name} x${item.quantity} - $${(item.price * item.quantity).toFixed(2)}`
+            ).join('\n');
+
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
             const notes = document.getElementById('order-notes').value;
+
+            let message = `🍸 *NUEVO PEDIDO ROSOL*\n\n`;
+            message += `Mesa: ${tableNumber}\n\n`;
+            message += `*PEDIDO:*\n${orderDetails}\n\n`;
+            message += `*TOTAL: $${total.toFixed(2)}*`;
+
             if (notes) {
                 message += `\n\n*NOTAS:*\n${notes}`;
             }
-            // ... resto del código ...
+
+            window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
+            cart = [];
+            updateCartDisplay();
+            closeCart();
         }
     </script>
 </body>
